@@ -1,7 +1,3 @@
-Absolutely! Here's a professional **README.md** file you can use for your Tic Tac Toe React project. It includes **all features, instructions, and info** based on your app.
-
----
-
 # Tic Tac Toe Game in React
 
 A modern, animated, single-page Tic Tac Toe game built with **React** featuring floating icons, pop animations, winner glow, and a fully responsive layout.
