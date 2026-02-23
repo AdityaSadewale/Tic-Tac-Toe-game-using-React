@@ -1,38 +1,32 @@
-.App {
-  text-align: center;
-}
+body{margin:0;font-family:'Segoe UI',sans-serif;overflow:hidden;background:#0f1b21;}
+.container{display:flex;flex-direction:column;align-items:center;min-height:100vh;text-align:center;color:white;position:relative;}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* Title */
+.title{font-size:32px;margin-bottom:25px;transition:all 0.5s ease;}
+.winner-animate{animation:glowFade 1.5s infinite alternate;font-size:40px;color:#ff26a0;}
+@keyframes glowFade{0%{text-shadow:0 0 5px #ff26a0,0 0 10px #ff26a0;}50%{text-shadow:0 0 20px #ff26a0,0 0 30px #ff26a0;}100%{text-shadow:0 0 5px #ff26a0,0 0 10px #ff26a0;}}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/* Board */
+.board{display:grid;grid-template-columns:repeat(3,100px);grid-gap:12px;justify-content:center;margin-bottom:20px;}
+.box{width:100px;height:100px;background-color:#1f3540;display:flex;justify-content:center;align-items:center;border-radius:10px;cursor:pointer;position:relative;transition:transform 0.2s,background 0.2s;}
+.box:hover{background:#264653;}
+.animate-icon{animation:pop 0.3s ease;}
+@keyframes pop{0%{transform:scale(0);}70%{transform:scale(1.2);}100%{transform:scale(1);}}
+.x-icon{color:#ff4d4d;font-size:50px;font-weight:bold;}
+.o-icon{color:#26ffcb;font-size:50px;font-weight:bold;}
+.winner-box{background:#ff26a0;color:#fff;animation:winnerBoxGlow 1s infinite alternate;}
+@keyframes winnerBoxGlow{0%{box-shadow:0 0 5px #ff26a0;transform:scale(1);}50%{box-shadow:0 0 20px #ff26a0;transform:scale(1.1);}100%{box-shadow:0 0 5px #ff26a0;transform:scale(1);}}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+.reset{padding:10px 25px;font-size:16px;border:none;border-radius:25px;cursor:pointer;background:#26ffcb;color:black;transition:all 0.3s ease;}
+.reset:hover{background:#1de9b6;transform:scale(1.1);}
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* Floating X/O icons */
+.floating-icons{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;overflow:hidden;}
+.floating-x,.floating-o{position:absolute;font-size:30px;font-weight:bold;animation:floatUp linear infinite;opacity:0.6;}
+.floating-x{color:#ff4d4d;}
+.floating-o{color:#26ffcb;}
+@keyframes floatUp{0%{transform:translateY(120vh) rotate(0deg);}100%{transform:translateY(-20vh) rotate(360deg);}}
+.floating-x:nth-child(odd){left:5%;animation-duration:15s;}
+.floating-x:nth-child(even){left:70%;animation-duration:20s;}
+.floating-o:nth-child(odd){left:30%;animation-duration:17s;}
+.floating-o:nth-child(even){left:90%;animation-duration:19s;}

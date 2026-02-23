@@ -5,6 +5,16 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #0f1b21;
+  body {
+  margin: 0;
+  background: #0f1b21;
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  text-align: center;
+}
 }
 
 code {
