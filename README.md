@@ -3,9 +3,7 @@
 A modern, animated, single-page Tic Tac Toe game built with **React** featuring floating icons, pop animations, winner glow, and a fully responsive layout.
 
 No external packages are required for functionality — pure React and CSS.
-
 ---
-
 ## 🌟 Features
 
 * **Animated X/O placement** – Each move has a pop animation.
@@ -85,12 +83,6 @@ npm start
 * No `tsparticles` or other external packages are needed.
 * Sounds were removed to avoid runtime errors from invalid URLs.
 * Fully single-page and lightweight.
-
----
-
-## 📸 Demo Preview
-
-*(Optional: Add screenshots here if you want.)*
 
 ---
 
