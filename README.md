@@ -80,11 +80,6 @@ npm install
 ```bash
 npm start
 ```
-
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
-
----
-
 ## ✅ Notes
 
 * No `tsparticles` or other external packages are needed.
